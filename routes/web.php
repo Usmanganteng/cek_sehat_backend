@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use Illuminate\Container\Attributes\Auth;
 use App\Http\Controllers\SymtompsController;
+use App\Models\Symtomps;
+use Monolog\Handler\RotatingFileHandler;
 
 Route::get('/', function () {
     return view('Frontend.main');
@@ -20,4 +22,10 @@ Route::get('/register', function () {
 });
 
 Route::resource('/diases', \App\Http\Controllers\DiasesController::class);
-Route::resource('/symtomps', \App\Http\Controllers\SymtompsController::class);
+
+Route::get('symtomps', [SymtompsController::class, 'index'])->name('symtomps');
+Route::get('symtomps/create', [SymtompsController::class, 'create'])->name('symtomps.create');
+Route::post('symtomps/store', [SymtompsController::class, 'store'])->name('symtomps.store');
+Route::get('symtomps/{nama}/edit', [SymtompsController::class, 'edit'])->name('symtomps.edit');
+Route::put('symtomps/{nama}/update', [SymtompsController::class, 'update'])->name('symtomps.update');
+Route::delete('Symtomps/{nama}/delete', [SymtompsController::class, 'destroy'])->name('symtomps.delete');

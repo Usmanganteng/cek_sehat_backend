@@ -1,7 +1,7 @@
 @extends('backend.dashboard')
 @section('content')
 <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span> Gejala</h4>
-<button href="./create.blade.php" type="button" class="btn rounded-pill btn-primary mb-3">Tambahkan</button>\
+<button href="{{ route('symtomps.create') }}" type="button" class="btn rounded-pill btn-primary mb-3">Tambahkan</button>\
 <!-- Basic Bootstrap Table -->
 <div class="card">
   <h5 class="card-header">Table Basic</h5>
@@ -28,7 +28,7 @@
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="{{ route('symtomps.edit', $symtomps->id) }}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                <a class="dropdown-item" href="{{ route('symtomps.destroy', $symtomps->id) }}"><i class="bx bx-trash me-1"></i> Delete</a>
+                <a class="dropdown-item" href="{{ route('symtomps.delete', $symtomps->id) }}"><i class="bx bx-trash me-1"></i> Delete</a>
               </div>
             </div>
           </td>
