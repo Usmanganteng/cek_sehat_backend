@@ -4,7 +4,7 @@ use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use Illuminate\Container\Attributes\Auth;
-use App\Http\Controllers\ForgetController;
+use App\Http\Controllers\SymtompsController;
 
 Route::get('/', function () {
     return view('Frontend.main');
@@ -19,5 +19,5 @@ Route::get('/register', function () {
     return view('auth.ragister');
 });
 
-route::get('/forget', [ForgetController::class, 'showForgetForm'])->name('forget');
-
+Route::resource('/diases', \App\Http\Controllers\DiasesController::class);
+Route::resource('/symtomps', \App\Http\Controllers\SymtompsController::class);

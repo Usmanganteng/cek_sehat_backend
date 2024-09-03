@@ -160,16 +160,19 @@
                 <div data-i18n="Authentications">Halaman</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="auth-login-basic.html" class="menu-link" target="_blank">
-                    <div data-i18n="Basic">Artikel</div>
-                  </a>
-                </li>
-                <li class="menu-item">
+              <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div data-i18n="Authentications">Info Penyakit</div>
+              </a>
+              <ul class="menu-sub">
+              <li class="menu-item">
                   <a href="" class="menu-link" target="_blank">
-                    <div data-i18n="Basic">Penyakit</div>
+                    <div data-i18n="Basic">Symtomps</div>
                   </a>
                 </li>
+              </ul>
+            </li>
                 <li class="menu-item">
                   <a href="" class="menu-link" target="_blank">
                     <div data-i18n="Basic">Carousel</div>

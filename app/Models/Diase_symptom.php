@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Diase_symptom extends Model
 {
     use HasFactory;
+
+    
 }

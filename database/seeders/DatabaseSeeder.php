@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Symtomps;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,10 +16,12 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'aldizar@localhost',
-            'password' => 'rahasia123'
-        ]);
+        $faker = \Faker\Factory::create('id_ID');
+        for ($i = 0; $i < 10; $i++){
+            Symtomps::create([
+                'nama' => $faker->name,
+                'description' => $faker->name,
+            ]);
+        }
     }
 }
